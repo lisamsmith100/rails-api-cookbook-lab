@@ -17,3 +17,10 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+Recipe.create([
+   { name: 'Hard Boiled Egg',
+     direction: 'Boil in water for 10 minutes'},
+   { name: 'Making Ice',
+     direction: 'Put water in freezer.'}
+])

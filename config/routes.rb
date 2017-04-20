@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 Rails.application.routes.draw do
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show]
   resources :ingredients, except: [:new, :edit]
+  resources :recipes, except: [:new, :edit]
 end
