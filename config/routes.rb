@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
 
-  resources :recipe_ingredients
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
