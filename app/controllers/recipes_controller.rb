@@ -27,7 +27,7 @@ class RecipesController < ApplicationController
   # PATCH/PUT /recipes/1
   def update
     if @recipe.update(recipe_params)
-      render json: @recipe
+      head :no_content
     else
       render json: @recipe.errors, status: :unprocessable_entity
     end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class IngredientsController < ApplicationController
-  before_action :set_ingredient, only: [:update, :destroy]
+  before_action :set_ingredient, only: [:show, :update, :destroy]
   # frozen_string_literal: true
     # GET /examples
     # GET /examples.json
@@ -13,7 +13,7 @@ class IngredientsController < ApplicationController
     # GET /ingredients/1
     # GET /ingredients/1.json
     def show
-      render json: Ingredient.find(params[:id])
+      render json: @ingredients
     end
 
     # POST /ingredients
